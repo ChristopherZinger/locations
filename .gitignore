@@ -1,3 +1,2 @@
 node_modules
-src/scripts
-index.ts
+src/dirty_scripts
