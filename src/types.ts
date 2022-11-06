@@ -13,6 +13,15 @@ export type Country = {
 	'intermediate-region-code': string
 }
 
+export type CountryTranslation = {
+	LANG: string
+	LANG_NAME: string
+	COUNTRY_ALPHA2_CODE: string
+	COUNTRY_ALPHA3_CODE: string
+	COUNTRY_NUMERIC_CODE: string
+	COUNTRY_NAME: string
+}
+
 export type CountryWithTranslations = Country & {
 	translations: Translations
 }

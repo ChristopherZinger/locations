@@ -1,11 +1,5 @@
 import z from 'zod'
-
-export type City = {
-	name: string
-	subcountry: string
-	country: string
-	geonameid: string
-}
+import type { City } from '../types'
 
 export const citySchema = z.object({
 	name: z.string().min(1),

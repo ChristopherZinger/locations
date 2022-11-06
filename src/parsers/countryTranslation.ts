@@ -1,13 +1,5 @@
 import z from 'zod'
-
-export type CountryTranslation = {
-	LANG: string
-	LANG_NAME: string
-	COUNTRY_ALPHA2_CODE: string
-	COUNTRY_ALPHA3_CODE: string
-	COUNTRY_NUMERIC_CODE: string
-	COUNTRY_NAME: string
-}
+import type { CountryTranslation } from '../types'
 
 export const countryTranslationSchema = z.object({
 	LANG: z.string(),

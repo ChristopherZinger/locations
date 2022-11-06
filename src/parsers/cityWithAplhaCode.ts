@@ -1,8 +1,6 @@
 import z from 'zod'
-import type { City } from './city'
 import { citySchema } from './city'
-
-export type CityWithAplha2Code = City & { 'country-alpha-2': string }
+import type { CityWithAplha2Code } from '../types'
 
 const cityWithAplha2CodeSchema = citySchema.extend({
 	'country-alpha-2': z.string().length(2)
