@@ -8,14 +8,17 @@ import { exportDataToFile } from './exportData'
 export function exportCountriesWithTranslations(
 	languages: (keyof typeof LanguageCodeToName)[]
 ) {
-	const pathToCountriesFile = path.join(__dirname, '../data/countries.json')
+	const pathToCountriesFile = path.join(
+		__dirname,
+		'../../data/countries.json'
+	)
 	const countries = parseCountries(
 		JSON.parse(fs.readFileSync(pathToCountriesFile, 'utf-8'))
 	)
 
 	const pathToCountryTranslationsFile = path.join(
 		__dirname,
-		'../data/countries_translation.json'
+		'../../data/countries_translation.json'
 	)
 	const translations = parseCountryTranslations(
 		JSON.parse(fs.readFileSync(pathToCountryTranslationsFile, 'utf-8'))
@@ -40,8 +43,6 @@ export function exportCountriesWithTranslations(
 			translations: countryCodeToTranslations
 		})
 	}
-
-	console.log(countriesWithTranslations)
 
 	exportDataToFile(
 		JSON.stringify(countriesWithTranslations),
